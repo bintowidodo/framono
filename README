@@ -1,0 +1,107 @@
+﻿# PHP Base Framework
+
+PHP Base Framework adalah kerangka kerja dasar untuk membangun aplikasi web menggunakan PHP. Framework ini dirancang untuk fleksibel, ringan, dan mudah digunakan, serta dapat dikembangkan lebih lanjut sesuai kebutuhan proyek Anda.
+
+---
+
+## Fitur Utama
+
+- **Modular Architecture**: Mendukung pengembangan aplikasi dengan struktur modular.
+- **Routing System**: Sistem routing bawaan untuk mempermudah pengelolaan URL.
+- **Template Engine**: Dukungan template engine untuk memisahkan logika dan tampilan.
+- **Database Abstraction**: Integrasi PDO untuk pengelolaan database yang aman dan efisien.
+- **Middleware**: Dukungan middleware untuk pengelolaan request/respons.
+- **Extensible**: Mudah untuk menambahkan library atau plugin eksternal.
+
+---
+
+## Instalasi
+
+### 1. Clone Repository
+Clone repository ini ke direktori proyek Anda:
+```bash
+git clone https://github.com/username/php-base-framework.git
+cd php-base-framework
+
+2. Install Dependencies
+
+composer install
+
+3. Konfigurasi
+Salin file .env.example menjadi .env:
+
+cp .env.example .env
+
+4. Jalankan Server
+php -S localhost:8000 -t public/
+
+Struktur Direktori
+php-base-framework/
+├── app/                # Direktori utama aplikasi
+│   ├── Controllers/    # Controller aplikasi
+│   ├── Models/         # Model aplikasi
+│   ├── Views/          # Template tampilan
+│   └── Helpers/        # Helper function
+├── config/             # Konfigurasi aplikasi
+├── public/             # Direktori publik (entry point)
+│   └── index.php       # Entry point utama
+├── routes/             # Definisi routing
+├── storage/            # File log, cache, dll.
+├── vendor/             # Library pihak ketiga (Composer)
+├── .env.example        # Contoh file environment
+├── composer.json       # File konfigurasi Composer
+└── README.md           # Dokumentasi
+
+Contoh Penggunaan
+
+1. Menambahkan Route
+Tambahkan route baru di file routes/web.php:
+$router->get('/hello', function () {
+    return "Hello, World!";
+});
+
+2. Membuat Controller
+Buat controller di direktori app/Controllers:
+
+namespace App\Controllers;
+
+class HelloController
+{
+    public function greet()
+    {
+        return "Hello from Controller!";
+    }
+}
+
+Tambahkan route untuk controller tersebut:
+
+$router->get('/greet', [App\Controllers\HelloController::class, 'greet']);
+
+Kontribusi
+Kami menerima kontribusi untuk pengembangan framework ini. Silakan ikuti langkah berikut:
+
+Fork repository ini.
+Buat branch baru untuk fitur/bugfix Anda:
+git checkout -b feature/nama-fitur
+
+Commit perubahan Anda:
+git commit -m "Menambahkan fitur: nama-fitur"
+
+Push branch Anda ke repository forked:
+git push origin feature/nama-fitur
+
+Buat Pull Request (PR) ke repository utama.
+
+
+Lisensi
+Framework ini dilisensikan di bawah lisensi MIT License.
+
+Kontak
+Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami di email@example.com.
+
+### Penyesuaian:
+- **URL Repository**: Ganti `https://github.com/username/php-base-framework.git` dengan URL repository Anda.
+- **Detail Fitur**: Tambahkan atau ubah fitur sesuai dengan framework yang Anda kembangkan.
+- **Informasi Kontak**: Ganti dengan email atau kontak tim Anda.
+
+README ini memberikan gambaran jelas tentang penggunaan dan pengembangan framework Anda. Apakah ada bagian yang perlu ditambahkan atau diperjelas?
