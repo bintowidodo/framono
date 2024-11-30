@@ -1,0 +1,23 @@
+{
+    "name": "bapak/framework",
+    "description": "This ERP Framework version 2.0.0",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+      "psr-4": {
+        "Bapak\\Framework\\": "src/",
+        "App\\": "app/"
+      },
+      "files": [
+        "app/Abstractions/npl_basic.php"
+      ]
+    },
+    "authors": [
+        {
+            "name": "Binto Widodo Pramono",
+            "email": "binto.widodo@novellpharm.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
