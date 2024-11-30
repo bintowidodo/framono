@@ -16,7 +16,8 @@ PHP Base Framework adalah kerangka kerja dasar untuk membangun aplikasi web meng
 
 ##Kebutuhan
 Library Rule Customize
-Less Dependency
+Abstraction Layer Implementation so get Less Dependency with PHP Version
+Set auo load abstraction
 Git base version control
 Factorization rule
 Secure
@@ -28,6 +29,8 @@ GAMP compliance development
 DevOps support
 Autonomous Test enable
 GDP compliance documentation
+Mengikuti prinsip SOLID:
+
 
 ---
 
