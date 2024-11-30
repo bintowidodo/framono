@@ -1,0 +1,3 @@
+nama fungsi huruf kecil
+tidak diijinkan menggunakan fungsi native PHP
+regex untuk cari fungsi tanpa prefix "npl_" : \s+(?!npl_)(\w+)\s*\(
