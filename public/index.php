@@ -10,12 +10,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 // Load routes
 $routes = require_once __DIR__ . '/../routes/web.php';
 
-// Ambil URL yang diminta
+// Ambil URL dari request
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// Hilangkan prefix '/erp_ku' dari URL
-$basePath = '/erp_ku'; // Sesuaikan dengan subdirektori
-$requestUri = substr($requestUri, strlen($basePath));
+// Debugging: Tampilkan URL yang diterima
+echo "Requested URL: " . $requestUri . "<br>";
 
 // Cek apakah URL cocok dengan rute yang didefinisikan
 if (isset($routes[$requestUri])) {
