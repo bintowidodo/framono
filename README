@@ -14,6 +14,21 @@ PHP Base Framework adalah kerangka kerja dasar untuk membangun aplikasi web meng
 - **Middleware**: Dukungan middleware untuk pengelolaan request/respons.
 - **Extensible**: Mudah untuk menambahkan library atau plugin eksternal.
 
+##Kebutuhan
+Library Rule Customize
+Less Dependency
+Git base version control
+Factorization rule
+Secure
+Web svc - client mode
+Otonomy Access Structure
+Easy and effective
+SQL Query standarization
+GAMP compliance development
+DevOps support
+Autonomous Test enable
+GDP compliance documentation
+
 ---
 
 ## Instalasi
