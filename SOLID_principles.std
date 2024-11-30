@@ -1,0 +1,35 @@
+Prinsip SOLID @Pemograman
+
+Berikut adalah empat prinsip lainnya dalam SOLID:
+
+Open/Closed Principle (OCP): 
+Prinsip ini menyatakan bahwa entitas perangkat lunak (kelas, modul, dll.) harus
+terbuka untuk perluasan (open) tetapi tertutup untuk modifikasi (closed). Artinya,
+kita harus dapat memperluas fungsionalitas entitas tanpa harus mengubah kode aslinya.
+
+Liskov Substitution Principle (LSP): 
+Prinsip ini mengemukakan bahwa objek dari kelas turunan harus dapat digunakan
+sebagai pengganti objek dari kelas induk tanpa mengganggu kebenaran program. 
+Dengan kata lain, objek yang mengimplementasikan kelas turunan harus bisa 
+berperilaku seperti objek dari kelas induk tanpa mempengaruhi hasil yang diharapkan.
+
+Interface Segregation Principle (ISP): 
+Prinsip ini menyatakan bahwa "klien tidak boleh dipaksa untuk bergantung
+pada antarmuka yang tidak digunakan". Jika sebuah klien memerlukan beberapa
+fungsionalitas, lebih baik memiliki beberapa antarmuka yang khusus untuk
+masing-masing fungsionalitas tersebut daripada memiliki satu antarmuka besar
+yang memaksa klien untuk mengimplementasikan metode yang tidak mereka butuhkan.
+
+Dependency Inversion Principle (DIP): 
+Prinsip ini menyatakan bahwa kelas tingkat tinggi tidak boleh bergantung
+pada kelas tingkat rendah, tetapi keduanya harus bergantung pada abstraksi.
+Dengan kata lain, ketergantungan antara kelas harus diarahkan ke abstraksi
+atau antarmuka, bukan implementasi kelas konkret.
+
+Dengan mengikuti prinsip-prinsip SOLID, 
+pengembang perangkat lunak dapat menciptakan kode yang lebih bersih, 
+terstruktur dengan baik, mudah dipelihara, dan lebih mudah untuk 
+dikembangkan dan diperluas dalam jangka panjang. Prinsip-prinsip ini 
+membantu menciptakan desain perangkat lunak yang fleksibel dan dapat 
+beradaptasi dengan perubahan kebutuhan bisnis tanpa mengorbankan kualitas 
+dan keterbacaan kode.
