@@ -10,8 +10,8 @@
             $apps = scandir($applicationsPath);
             foreach ($apps as $app) {
                 if ($app === '.' || $app === '..') continue;
-                npl_dbg($applicationsPath);
-                $routeFile = $applicationsPath . "/$app/routes.php";
+                
+                $routeFile = $applicationsPath . "/routes.php";
                // npl_echo($routeFile); $routeFile ="../app/Applications/Blog/routes.php";
                 if (file_exists($routeFile)) {
                     $routes = include $routeFile;

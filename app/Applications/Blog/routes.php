@@ -2,6 +2,9 @@
 	
 	use App\Applications\Blog\Controllers\BlogController;
 
+	if (!defined('CORE_FRAMEWORK')) {
+		exit('Direct access not allowed');
+	}
 
 	
 	return [
