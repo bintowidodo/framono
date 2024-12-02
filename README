@@ -14,23 +14,42 @@ PHP Base Framework adalah kerangka kerja dasar untuk membangun aplikasi web meng
 - **Middleware**: Dukungan middleware untuk pengelolaan request/respons.
 - **Extensible**: Mudah untuk menambahkan library atau plugin eksternal.
 
-##Kebutuhan
-Library Rule Customize
-Abstraction Layer Implementation so get Less Dependency with PHP Version
-Set auo load abstraction
-Git base version control
-Factorization rule
-Secure
-Web svc - client mode
-Otonomy Access Structure
-Easy and effective
-SQL Query standarization
-GAMP compliance development
-DevOps support
-Autonomous Test enable
-GDP compliance documentation
-Mengikuti prinsip SOLID:
 
+
+##Kebutuhan
+
+Core framework harus menjadi tanggung jawab team diluar softdev. 
+    Team softdev hanya bertanggung jawab thd pengembangan aplikasi bisnis di dalam core.
+    Pengembangan core framework harus bisa menghilangkan absolute developer dimana spt halnya no absolute access.
+    A least apa yang dikembangkan oleh team softdev tidak akan bisa berjalan tanpa core framework.
+Perlu disusunnya pengaturan propriatery library berikut prosedur dan ketentuannya.
+Harus ada pola pengaturan hak akses yang :
+    - Terpusat
+    - berbasis RABC atau Separated of Duty ( SoD )
+    - tidak menutup kemungkinan hak akses yang bersifat cross divisi atau departemen.
+    - sistem yang tidak mengijinkan satu user punya absolute authority
+    - per aplikasi memiliki pengaturan tersendiri namun tetap terpusat.
+Abstraction Layer Implementation as Function Alias so get Less Dependency with PHP Version Update or Upgrade.
+Harus menerapkan auto load untuk propriatery library dan Function Alias.
+Source code harus tersimpan dalam sistem version control dengan menggunakan GIT.
+Harus bisa memungkinkan implementasi konsep DevOps.
+Harus bisa memungkinkan dapat ditest dengan menggunakan autonomous test tool.
+Harus terdokumentasi sehingga bisa dilakukan validasi verifikasi sesuai GAMP 5.
+Harus memiliki dokumentasi mengikuti Good Documentation Practice.
+Perlu diterapkan standarisasi SQL Query yang bisa dipertanggung jawabkan.
+Harus ada dipastikan bahwa pemograman mengikuti konsep Factorization Rule dan SOLID
+Standar keamanan harus mengikuti standar yang ada.
+- Bebas xscript
+- Bebas SQL Injection
+- Matikan fungsi execute native PHP
+Setiap proses bisa menghasilkan kebutuhan forensik jika terjadi sesuatu dan turut menjaga integritas data.
+Framework harus mendukung pencatatan data yang akurat, dapat dipertanggungjawabkan, dan sesuai dengan regulasi farmasi.
+Framework harus siap digunakan baik sebagai API maupun WEB.
+Relasi dengan config : tidak boleh ada bersifat hardcode.
+Relasi dengan Infrastruktur maka framework harus :
+- flexibel dengan perubahan topology server database
+- compatible dengan konsep load balancing
+- menggunakan domain name untuk alamat dan bukan berupa IP address.
 
 ---
 
