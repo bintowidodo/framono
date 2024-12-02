@@ -10,8 +10,6 @@ if (npl_PhpVersion::versionCheck('8.0.0')) {
 } else {
     echo "PHP version is lower than 8.0! <br/>";
 }
- 
-
 // Menangani deprecated feature untuk PHP versi 7.4 dan lebih tinggi
 npl_echo(npl_PhpVersion::handleDeprecation());
 

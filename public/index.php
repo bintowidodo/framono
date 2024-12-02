@@ -1,20 +1,34 @@
 <?php
-	require '../vendor/autoload.php';
-	
+    
+    require '../vendor/autoload.php';
+	define('CORE_FRAMEWORK', true);
 
+	use App\Core\AppLoader;
 	use App\Core\RouteLoader;
 	use App\Core\Router;
 
-	// Muat semua rute dari aplikasi
-	$routeLoader = new RouteLoader();
-	$routeLoader->load(__DIR__ . '/../app/Applications');
-	$routes = $routeLoader->getRoutes();
+	try {
+        // Muat aplikasi yang terdaftar
+        $appLoader = new AppLoader(__DIR__ . '/../config/apps.php');
+        $appLoader->load();
 
-	// Inisialisasi Router
-	$router = new Router($routes);
+        // Muat semua rute dari aplikasi
+        $routeLoader = new RouteLoader();
+        foreach ($appLoader->getApps() as $app => $details) {
+            $routeLoader->load($details['path']);
+        }
 
-	// Dispatch request
-	$method = $_SERVER['REQUEST_METHOD'];
-	$uri = $_SERVER['REQUEST_URI'];
+        $routes = $routeLoader->getRoutes();
 
-	$router->dispatch($method, $uri);
+        // Inisialisasi Router
+        $router = new Router($routes);
+
+        // Dispatch request
+        $method = $_SERVER['REQUEST_METHOD'];
+        $uri = $_SERVER['REQUEST_URI'];
+
+        $router->dispatch($method, $uri);
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo "Error: " . $e->getMessage();
+    }
