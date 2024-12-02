@@ -9,7 +9,12 @@
         "App\\": "app/"
       },
       "files": [
-        "app/Abstractions/npl_basic.php"
+        "app/Abstractions/npl_basic.php",
+        "app/Abstractions/npl_change_option.php",
+        "app/Abstractions/npl_url.php",
+        "app/Abstractions/npl_var_handler.php",
+        "app/Abstractions/npl_class.php",
+        "app/Abstractions/npl_network.php"
       ]
     },
     "authors": [
